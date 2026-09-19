@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student Inquiry, Demo and Admission Tracking System">
+  <title>Student Inquiry Management</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect rx='8' width='32' height='32' fill='%232563eb'/><text x='16' y='22' text-anchor='middle' font-size='16' fill='white' font-family='Arial'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SI</div>
+        <div>
+          <strong>Student Inquiry</strong>
+          <span>Admission CRM</span>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <button data-route="dashboard">Dashboard</button>
+        <button data-route="add">Add Inquiry</button>
+        <p class="nav-label">Inquiries</p>
+        <button data-route="inquiries">All Inquiries</button>
+        <button data-route="pending">Pending</button>
+        <button data-route="demo">Demo Students</button>
+        <button data-route="ok">Admission OK</button>
+        <button data-route="notok">Admission Not OK</button>
+        <p class="nav-label">Operations</p>
+        <button data-route="google-form">Google Form Data</button>
+        <button data-route="centres">Centres</button>
+        <button data-route="templates">Message Templates</button>
+        <button data-route="reports">Reports</button>
+        <button data-route="export">Export to Excel</button>
+        <button data-route="settings">Settings</button>
+      </nav>
+      <div class="sidebar-foot" id="sidebarFoot"></div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open menu">☰</button>
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p class="muted" id="pageSub">Inquiry, Demo &amp; Admission Tracking System</p>
+        </div>
+        <div class="top-actions">
+          <span class="conn-pill" id="connPill">Connecting…</span>
+          <span class="muted last-updated" id="lastUpdated">Last updated: —</span>
+          <button class="btn" id="refreshBtn">Refresh</button>
+          <div class="user-chip" id="userChip">Admin</div>
+        </div>
+      </header>
+      <main class="content" id="view"></main>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="toast" id="toast" hidden></div>
+  <div class="modal" id="modal" hidden></div>
+  <div class="loader" id="loader">
+    <div class="loader-card">
+      <div class="spinner" aria-hidden="true"></div>
+      <strong id="loaderText">Loading…</strong>
+      <span class="muted">Talking to Google Sheet</span>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/inquiries.js"></script>
+  <script src="js/inquiry-form.js"></script>
+  <script src="js/google-form.js"></script>
+  <script src="js/centres.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
