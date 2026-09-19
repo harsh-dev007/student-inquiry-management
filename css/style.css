@@ -63,6 +63,18 @@ body {
   margin: 14px 12px 6px; font-size: 11px; letter-spacing: .08em;
   text-transform: uppercase; color: #64748b;
 }
+.nav-count {
+  display: inline-grid; place-items: center; min-width: 18px; height: 18px;
+  margin-left: 6px; padding: 0 5px; border-radius: 99px;
+  background: #fecaca; color: #991b1b; font-size: 11px; font-weight: 800;
+}
+.draft-banner {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  border: 1px dashed #fca5a5; background: var(--red-soft);
+}
+.draft-banner h3 { margin: 0 0 4px; }
+.draft-card .err-line { color: var(--red); font-size: 13px; margin: 8px 0 12px; }
+.draft-json { margin-top: 12px; }
 .sidebar-foot { padding: 14px 16px 18px; font-size: 12px; color: #93c5fd; }
 
 .main { flex: 1; min-width: 0; }

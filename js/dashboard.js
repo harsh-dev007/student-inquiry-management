@@ -22,6 +22,7 @@ window.Dashboard = (() => {
     const maxC = Math.max(1, ...Object.values(centres));
 
     document.getElementById("view").innerHTML = `
+      ${typeof FailDrafts !== "undefined" ? FailDrafts.bannerHtml() : ""}
       <div class="hero">
         <div>
           <h2>Welcome</h2>

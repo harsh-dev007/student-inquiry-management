@@ -16,7 +16,7 @@
   .topbar h1 { font-size: 18px; }
   .top-actions .last-updated { display: none; }
   .content { padding: 14px; }
-  .hero { flex-direction: column; align-items: flex-start; padding: 16px; }
+  .hero, .draft-banner { flex-direction: column; align-items: flex-start; padding: 16px; }
   .hero h2 { font-size: 20px; }
   .kpi-grid { grid-template-columns: 1fr 1fr; }
   .grid-2, .form-grid { grid-template-columns: 1fr; }

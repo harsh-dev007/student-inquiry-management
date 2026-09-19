@@ -11,6 +11,7 @@ window.App = (() => {
     ok: "Admission OK",
     notok: "Admission Not OK",
     "google-form": "Google Form Data",
+    drafts: "Failed drafts",
     centres: "Centres",
     templates: "Message Templates",
     reports: "Reports",
@@ -107,6 +108,7 @@ window.App = (() => {
       notok: () => Inquiries.render("notok"),
       export: () => Inquiries.render("export"),
       "google-form": GoogleForm.render,
+      drafts: FailDrafts.render,
       centres: Centres.render,
       templates: Templates.render,
       reports: Reports.render,
@@ -142,6 +144,7 @@ window.App = (() => {
     };
     window.addEventListener("hashchange", () => { parseHash(); render(); });
     parseHash();
+    FailDrafts.refreshBadge();
     try {
       await load();
     } catch (_) {

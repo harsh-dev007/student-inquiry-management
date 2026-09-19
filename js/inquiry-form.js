@@ -144,7 +144,9 @@ window.InquiryForm = (() => {
       if (thenWhatsApp) WhatsApp.send({ ...row, ...data }, "mother", "Welcome Message");
       App.go("inquiries");
     } catch (e) {
-      App.toast(e.message, "error");
+      const payload = row ? { ...data, id: row.id } : data;
+      FailDrafts.add(payload, e.message, row ? "updateInquiry" : "saveInquiry");
+      App.toast((e.message || "Could not save to Google Sheet") + " Saved as a fail draft. Open Failed drafts to retry.", "error");
     } finally {
       if (btn) {
         btn.disabled = false;
